@@ -1,0 +1,14 @@
+{
+  "name": "qia-widgets",
+  "version": "2.3.1",
+  "description": "Web widgets made for making DX better",
+  "main": "qia-widgets.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "Johann Huang",
+  "license": "UNLICENSED"
+}
