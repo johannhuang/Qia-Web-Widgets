@@ -1,6 +1,6 @@
 {
   "name": "qia-widgets",
-  "version": "2.3.1",
+  "version": "0.0.0",
   "description": "Web widgets made for making DX better",
   "main": "qia-widgets.js",
   "scripts": {
