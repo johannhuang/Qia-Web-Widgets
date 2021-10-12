@@ -1,14 +1,19 @@
 {
   "name": "qia-widgets",
   "version": "0.0.0",
-  "description": "Web widgets made for making DX better",
+  "description": "Web widgets for better DX",
+	"keywords": [
+		"web-components"
+	],
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "web-components"
-  ],
+  "license": "UNLICENSED",
   "author": "Johann Huang",
-  "license": "UNLICENSED"
+	"homepage": "https://github.johannhuang.com/Qia-Web-Widgets/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/johannhuang/Qia-Web-Widgets.git"
+	},
+	"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

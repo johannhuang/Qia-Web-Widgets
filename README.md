@@ -2,14 +2,35 @@
 
 Web widgets powered by web components and React, published as UMD modules
 
+---
+
+Documentation is available at <https://github.johannhuang.com/Qia-Web-Widgets/>.
+
 On 20211012, version 3 is published. (Changed namespace twice, therefore bumped major version twice.)
 
 
-## Quickstart - Examples
+## APIs
 
-- Qia-Web-Widgets--Quickstart: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart>
-- Qia-Web-Widgets--Quickstart--React: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--React>
-- Qia-Web-Widgets--Quickstart--Angular: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--Angular>
+### HTML Custom Elements
+
+- `<qia-paginator current="" total=""></qia-paginator>`
+- `<qia-skeleton></qia-skeleton>`
+
+### JavaScript Constructors
+
+- `class QiaPaginator (props = {current, total}, containerElement)`
+- `class QiaSkeleton (props = {}, containerElement)`
+
+### React Components
+
+- `class QiaPaginatorReactComponent extends React.Component (props = {current, total, onPageChange?, onPageChanged?})`
+- `class QiaSkeletonReactComponent extends React.Component ()`
+
+
+## Installation
+
+1. Download files from GitHub or find links on CDN such as UNPKG.com, and then import as HTML scirpts
+2. `npm install qia-widgets` from <https://www.npmjs.com/package/qia-widgets>
 
 
 ## Quickstart - Step by Step
@@ -75,19 +96,8 @@ React.createElement(QiaSkeletonReactComponent)
 ```
 
 
-## APIs
+## Quickstart - Examples
 
-### HTML Custom Elements
-
-- `<qia-paginator current="" total=""></qia-paginator>`
-- `<qia-skeleton></qia-skeleton>`
-
-### JavaScript Constructors
-
-- `class QiaPaginator (props = {current, total}, containerElement)`
-- `class QiaSkeleton (props = {}, containerElement)`
-
-### React Components
-
-- `class QiaPaginatorReactComponent extends React.Component (props = {current, total, onPageChange?, onPageChanged?})`
-- `class QiaSkeletonReactComponent extends React.Component ()`
+- Qia-Web-Widgets--Quickstart: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart>
+- Qia-Web-Widgets--Quickstart--React: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--React>
+- Qia-Web-Widgets--Quickstart--Angular: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--Angular>
