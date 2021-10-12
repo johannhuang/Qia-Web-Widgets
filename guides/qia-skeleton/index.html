@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Qia Skeleton</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		qia-skeleton {
+			margin: 1em;
+			border: 1px dotted gray;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div class="document-content">
+		<h1>Qia Skeleton</h1>
+		<h2>Demonstration</h2>
+		<div class="my-skeletons">
+			<h3>My Skeletons</h3>
+			<qia-skeleton></qia-skeleton>
+			<span class="qia-skeleton-container"></span>
+		</div>
+		<h3>JavaScript Code of Usage Examples</h3>
+		<div class="code-container" style="overflow: auto;">
+			<code>
+					<pre></pre>
+				</code>
+		</div>
+	</div>
+	<script src="../../libs/react-v17.0.1/react.development.js"></script>
+	<script src="../../libs/react-v17.0.1/react-dom.development.js"></script>
+	<script src="../../qia-skeleton.js"></script>
+	<script class="demo-code">
+	const QiaSkeletonReactComponent = QiaSkeleton.ReactComponent
+	const qiaSkeletonContainer = document.querySelector('.qia-skeleton-container')
+	const qiaSkeleton = new QiaSkeleton({}, qiaSkeletonContainer)
+	</script>
+	<script>
+		const codePreElement = document.querySelector('code pre')
+		const demoCodeElement = document.querySelector('script.demo-code')
+		if (codePreElement && demoCodeElement) {
+			codePreElement.innerHTML = demoCodeElement.innerHTML
+		}
+	</script>
+</body>
+</html>

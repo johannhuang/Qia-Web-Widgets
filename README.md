@@ -2,7 +2,7 @@
 
 Web widgets powered by web components and React, published as UMD modules
 
-On 20211010, version 2 is published.
+On 20211012, version 3 is published. (Changed namespace twice, therefore bumped major version twice.)
 
 
 ## Quickstart - Examples
@@ -21,42 +21,32 @@ On 20211010, version 2 is published.
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
-or
+2. include Qia.Widgets
 
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-
-window.React = React
-window.ReactDOM = ReactDOM
-```
-
-2. include QiaWidgets
+for all available widgets as HTML scripts
 
 ```html
-<script src="$base_url/qia-widgets.js" crossorigin></script>
+<script src="$base_url/qia.widgets.js" crossorigin></script>
+<!-- .widgets is the namespace just like .audio is the namespace for audio-player; web components are name without widgets in-between, such as qia-paginator -->
 ```
 
-or just the component used as
+for just the widgets needed as HTML scripts
 
 ```html
 <script src="node_modules/qia-widgets/qia-skeleton.js"></script>
 ```
 
-or using JavaScript import
+for all available widgets in JavaScript with a bare module resolver
 
 ```js
-import '$base_url/qia-widgets.js' // for side-effects
-
-import Qia from '$base_url/qia-widgets.js' // for constructor function
-const QiaSkeleton = Qia.Widgets.Skeleton
+import QiaWidgets from 'qia-widgets'
+const QiaSkeleton = QiaWidgets.Skeleton
 ```
 
-or
+for just the widgets needed in JavaScript with a bare module resolver
 
 ```js
-import Qia from 'qia-widgets' // if transpiler e.g., webpack used
-const QiaSkeleton = Qia.Widgets.Skeleton
+import QiaSkeleton from 'qia-widgets/qia-skeleton'
 ```
 
 3. use QiaWidgets
@@ -77,9 +67,7 @@ document.body.appendChild(qiaSkeletonContainer)
 or JSX or React.createElement() in React
 
 ```js
-import Qia from 'qia-widgets'
-
-const QiaSkeletonReactComponent = Qia.Widgets.Skeleton.ReactComponent
+const QiaSkeletonReactComponent = QiaSkeleton.ReactComponent
 
 React.createElement(QiaSkeletonReactComponent)
 
@@ -87,7 +75,7 @@ React.createElement(QiaSkeletonReactComponent)
 ```
 
 
-## API
+## APIs
 
 ### HTML Custom Elements
 

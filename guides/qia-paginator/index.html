@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Qia Paginator</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		qia-paginator {
+			margin: 1em;
+			border: 1px dotted gray;
+			padding: 1em;
+		}
+
+		.qia-paginator-web-components {
+			text-align: center;
+		}
+
+		.paged-content {
+			margin: 1em;
+			border: 1px dashed gray;
+			padding: 1em;
+		}
+
+		.paged-content .qia-paginator-container {
+			text-align: center;
+		}
+
+		.paged-content .qia-paginator-container qia-paginator {
+			margin: 0;
+			border: none;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="document-content">
+		<h1>Qia Paginator</h1>
+		<h2>Demonstration</h2>
+		<div class="my-paginators">
+			<h3>My Paginators</h3>
+			<div class="qia-paginator-web-components">
+				<qia-paginator current="2" total="3"></qia-paginator>
+				<qia-paginator current="3" total="5"></qia-paginator>
+				<qia-paginator current="4" total="7"></qia-paginator>
+				<qia-paginator current="3" total="9"></qia-paginator>
+				<qia-paginator current="5" total="9"></qia-paginator>
+				<qia-paginator current="7" total="9"></qia-paginator>
+			</div>
+			<div class="paged-content">
+				<div class="page-container"></div>
+				<div class="qia-paginator-container"></div>
+			</div>
+		</div>
+		<h3>JavaScript Code of Usage Examples</h3>
+		<div class="code-container" style="overflow: auto;">
+			<code>
+						<pre></pre>
+					</code>
+		</div>
+	</div>
+	<script src="../../libs/react-v17.0.1/react.development.js"></script>
+	<script src="../../libs/react-v17.0.1/react-dom.development.js"></script>
+	<script src="../../qia-paginator.js"></script>
+	<script class="demo-code">
+		// script[src=".../qia-paginator.js"]
+
+		const QiaPaginatorReactComponent = QiaPaginator.ReactComponent
+
+		const qiaPaginatorContainer = document.querySelector('.qia-paginator-container')
+		const qiaPaginator = new QiaPaginator({ current: 92, total: 97 }, qiaPaginatorContainer)
+		const qiaPaginatorElement = qiaPaginator.element
+
+		const pageContainer = document.querySelector('.page-container')
+		pageContainer.innerHTML = `Qia Paginator demo - paged content for page ${92}`
+
+		qiaPaginatorElement.addEventListener('pageChanged', function (event) {
+			pageContainer.innerHTML = `Qia Paginator demo - paged content for page ${event.detail.current}`
+		})
+
+		// SECTION: Advanced - Animated transition to show reactiveness
+		window.setInterval(() => {
+			const currentState = qiaPaginatorElement.getState()
+
+			if (currentState.current < currentState.total) {
+				qiaPaginatorElement.setState({
+					current: currentState.current + 1
+				})
+			} else {
+				qiaPaginatorElement.setState({
+					current: 1
+				})
+			}
+		}, 1000)
+	</script>
+	<script>
+		const codePreElement = document.querySelector('code pre')
+		const demoCodeElement = document.querySelector('script.demo-code')
+		if (codePreElement && demoCodeElement) {
+			codePreElement.innerHTML = demoCodeElement.innerHTML
+		}
+	</script>
+</body>
+</html>

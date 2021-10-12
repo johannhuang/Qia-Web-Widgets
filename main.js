@@ -1,0 +1,1 @@
+const QiaWidgets=require("./qia.widgets").Widgets;module.exports=QiaWidgets;
