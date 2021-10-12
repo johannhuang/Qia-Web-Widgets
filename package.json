@@ -1,9 +1,15 @@
 {
 	"name": "qia-widgets",
 	"version": "0.0.0",
-	"description": "Web widgets for better DX",
+	"description": "Web widgets (web components) for better DX",
 	"keywords": [
-		"web-components"
+		"web-components",
+		"webcomponents",
+		"customelements",
+		"react-components",
+		"reactcomponents",
+		"reactjs",
+		"react"
 	],
 	"main": "main.js",
 	"license": "UNLICENSED",
