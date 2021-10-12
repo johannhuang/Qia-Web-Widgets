@@ -27,7 +27,7 @@ for all available widgets as HTML scripts
 
 ```html
 <script src="$base_url/qia.widgets.js" crossorigin></script>
-<!-- .widgets is the namespace just like .audio is the namespace for audio-player; web components are name without widgets in-between, such as qia-paginator -->
+<!-- .widgets is the namespace just like .audio is the namespace for audio-player; web components are named without widgets in-between, such as qia-paginator -->
 ```
 
 for just the widgets needed as HTML scripts
