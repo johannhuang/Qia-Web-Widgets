@@ -72,7 +72,7 @@
 		const QiaPaginatorReactComponent = QiaPaginator.ReactComponent
 
 		const qiaPaginatorContainer = document.querySelector('.qia-paginator-container')
-		const qiaPaginator = new QiaPaginator({ current: 92, total: 97 }, qiaPaginatorContainer)
+		const qiaPaginator = new QiaPaginator(qiaPaginatorContainer, { current: 92, total: 97 })
 		const qiaPaginatorElement = qiaPaginator.element
 
 		const pageContainer = document.querySelector('.page-container')

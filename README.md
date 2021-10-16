@@ -101,3 +101,10 @@ React.createElement(QiaSkeletonReactComponent)
 - Qia-Web-Widgets--Quickstart: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart>
 - Qia-Web-Widgets--Quickstart--React: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--React>
 - Qia-Web-Widgets--Quickstart--Angular: <https://github.com/johannhuang/Qia-Web-Widgets--Quickstart--Angular>
+
+
+## Dependencies
+
+React and ReactDOM is the runtime dependencies which are not bundled in this package.
+
+The QiaText modules in this package depends on other bundled libraries including [SimpleMDE](https://www.npmjs.com/package/simplemde) and [Font Awesome](https://www.npmjs.com/package/font-awesome).
