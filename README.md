@@ -6,25 +6,28 @@ Web widgets powered by web components and React, published as UMD modules
 
 Documentation is available at <https://github.johannhuang.com/Qia-Web-Widgets/>.
 
-On 20211012, version 3 is published. (Changed namespace twice, therefore bumped major version twice.)
+On 20211016, version 4 is published.
 
 
 ## APIs
 
+### JavaScript Constructors
+
+- `class QiaMarkDownText (containerElement: HTMLElement, optionsObject? : { readOnly?: boolean; canFullScreen?: boolean } = {})`
+- `class QiaPaginator (containerElement, optionsObject = { current, total })`
+- `class QiaSkeleton (containerElement)`
+
 ### HTML Custom Elements
 
 - `<qia-paginator current="" total=""></qia-paginator>`
+	* `class QiaPaginator.HTMLElement extends HTMLElement`
 - `<qia-skeleton></qia-skeleton>`
-
-### JavaScript Constructors
-
-- `class QiaPaginator (props = {current, total}, containerElement)`
-- `class QiaSkeleton (props = {}, containerElement)`
+	* `class QiaSkeleton.HTMLElement extends HTMLElement`
 
 ### React Components
 
-- `class QiaPaginatorReactComponent extends React.Component (props = {current, total, onPageChange?, onPageChanged?})`
-- `class QiaSkeletonReactComponent extends React.Component ()`
+- `class QiaPaginator.ReactComponent extends React.Component (props = { current, total, onPageChange?, onPageChanged? })`
+- `class QiaSkeleton.ReactComponent extends React.Component ()`
 
 
 ## Installation
@@ -105,6 +108,8 @@ React.createElement(QiaSkeletonReactComponent)
 
 ## Dependencies
 
-React and ReactDOM is the runtime dependencies which are not bundled in this package.
-
-The QiaText modules in this package depends on other bundled libraries including [SimpleMDE](https://www.npmjs.com/package/simplemde) and [Font Awesome](https://www.npmjs.com/package/font-awesome).
+* QiaSkeleton, QiaPaginator
+	* React and ReactDOM (They are not bundled in the module.)
+* QiaMarkDownText
+	* [Font Awesome](https://www.npmjs.com/package/font-awesome) (It is not bundled in the module.)
+	* [SimpleMDE](https://www.npmjs.com/package/simplemde) (It is bundled in the module.)
